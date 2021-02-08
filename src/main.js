@@ -2,9 +2,13 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
-  app.quit();
-}
+// if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+//   app.quit();
+// }
+
+const db = require('better-sqlite3')('prisma/dev.db');
+const row = db.prepare('SELECT * FROM Pin LIMIT 1').get();
+console.log('result', row);
 
 const createWindow = () => {
   // Create the browser window.

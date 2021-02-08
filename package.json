@@ -76,6 +76,7 @@
     "style-loader": "^1.2.1"
   },
   "dependencies": {
+    "better-sqlite3": "^7.1.2",
     "electron-squirrel-startup": "^1.0.0"
   }
 }
