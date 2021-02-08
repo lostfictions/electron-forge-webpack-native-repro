@@ -8,7 +8,9 @@ const path = require('path');
 
 
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient()
+const prisma = new PrismaClient({
+  datasources: { db: { url: 'file:' + path.join(process.cwd(), 'prisma/dev.db') } }
+})
 
 prisma.pin.findFirst().then(res => console.log(res));
 
