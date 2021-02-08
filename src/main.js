@@ -10,7 +10,7 @@ const path = require('path');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
-
+prisma.pin.findFirst().then(res => console.log(res));
 
 const createWindow = () => {
   // Create the browser window.
