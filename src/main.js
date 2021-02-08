@@ -2,9 +2,15 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
-  app.quit();
-}
+// if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+//   app.quit();
+// }
+
+
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient()
+
+
 
 const createWindow = () => {
   // Create the browser window.

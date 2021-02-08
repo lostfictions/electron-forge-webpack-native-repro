@@ -1,0 +1,26 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  // binaryTargets = ["native"]
+  // output   = "../shared/generated/prisma"
+}
+
+model Pin {
+  id    Int      @id @default(autoincrement())
+  url   String   @unique
+  title String
+  body  String
+  ctime DateTime
+  mtime DateTime
+  tags  Tag[]
+}
+
+model Tag {
+  id   Int    @id @default(autoincrement())
+  tag  String @unique
+  pins Pin[]
+}
