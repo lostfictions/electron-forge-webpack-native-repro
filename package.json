@@ -69,7 +69,7 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "@electron-forge/plugin-webpack": "6.0.0-beta.54",
-    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.2.1",
     "css-loader": "^4.2.1",
     "electron": "11.2.3",
     "node-loader": "^1.0.1",
